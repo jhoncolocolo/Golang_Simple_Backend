@@ -1,0 +1,30 @@
+{{define "index"}}
+{{template "header_general"}}
+        <a name="" id="" class="btn btn-primary" href="/create" role="button">New Restriction</a>
+        <br/>
+        <br/>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Descriptiuon</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{range.}}
+            <tr>
+              <td scope="row">{{.Id}}</td>
+              <td>{{.Name}}</td>
+              <td>{{.Description}}</td>
+              <td>
+                  <a name="" id="" class="btn btn-warning" href="/edit?id={{.Id}}" role="button">Edit</a>
+                  <a name="" id="" class="btn btn-danger" href="/destroy?id={{.Id}}" role="button">Delete</a>
+              </td>
+            </tr>
+            {{end}}
+          </tbody>
+        </table>
+{{template "footer"}}
+{{end}}

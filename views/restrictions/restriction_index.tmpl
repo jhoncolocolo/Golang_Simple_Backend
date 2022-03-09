@@ -1,0 +1,30 @@
+{{define "restriction_index"}}
+    {{template "header_general"}}
+        <a name="" id="" class="btn btn-primary" href="/restrictions/create" role="button">New Restriction</a>
+        <br/>
+        <br/>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Descriptiuon</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{range.}}
+            <tr>
+              <td scope="row">{{.Id}}</td>
+              <td>{{.Name}}</td>
+              <td>{{.Description}}</td>
+              <td>
+                  <a name="" id="" class="btn btn-warning" href="/restrictions/edit?id={{.Id}}" role="button">Edit</a>
+                  <a name="" id="" class="btn btn-danger" href="/restrictions/destroy?id={{.Id}}" role="button">Delete</a>
+              </td>
+            </tr>
+            {{end}}
+          </tbody>
+        </table>
+    {{template "footer_general"}}
+{{end}}

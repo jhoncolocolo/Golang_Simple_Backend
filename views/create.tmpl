@@ -1,0 +1,25 @@
+{{define "create"}}
+{{template "header"}}
+<div class="card">
+    <div class="card-header">
+        Restricciones
+    </div>
+    <div class="card-body">
+        <form method="POST" action="/store">
+            <div class="form-group">
+              <label for="Name">Name:</label>
+              <input type="text"
+                class="form-control" name="name" id="name" aria-describedby="helpId" placeholder="">
+              <small id="helpId" class="form-text text-muted">Write Name</small>
+            </div>
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea class="form-control" name="description" id="description" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Save</button>
+            <a name="" id="" class="btn btn-primary" href="/" role="button">Cancelar</a>
+        </form>
+    </div>
+</div>
+{{template "footer"}}
+{{end}}

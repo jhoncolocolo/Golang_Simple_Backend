@@ -1,0 +1,11 @@
+Comands 
+
+1. With this command init our project
+go mod init  system_backend_go
+
+
+2. Get Driver to mysql
+go  get -u github.com/go-sql-driver/mysql
+
+3. Run main
+go run main.go
