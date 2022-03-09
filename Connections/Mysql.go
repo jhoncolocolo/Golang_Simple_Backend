@@ -9,7 +9,7 @@ import (
 func ConnectMySQLDatabase() (connection *sql.DB) {
 	Driver := "mysql"
 	User := "root"
-	Password := "1234"
+	Password := "YOUR_PASSWORD"
 	Name := "system_backend_go"
 	connection, err := sql.Open(Driver, User+":"+Password+"@tcp(127.0.0.1)/"+Name+"?parseTime=true")
 	if err != nil {
